@@ -1,9 +1,6 @@
 package main
 
-import (
-	"fmt"
-	"math"
-)
+import "fmt"
 
 func main() {
 
@@ -48,7 +45,17 @@ func main() {
 	// fmt.Printf("Var type %T - value %#v\n", err, err)
 	// fmt.Printf("Var type %T - value %#v\n", i, i)
 
-	const pi = math.Pi
-	fmt.Printf("Var type %T - value %#v\n", pi, pi)
+	// const pi = math.Pi
+	// fmt.Printf("Var type %T - value %#v\n", pi, pi)
 
+	s := sum(1, 2, 3, 4, 5)
+	fmt.Printf("Var type %T - value %#v\n", s, s)
+}
+
+func sum(x ...int) int {
+	s := 0
+	for _, v := range x {
+		s += v
+	}
+	return s
 }
