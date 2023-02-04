@@ -1,8 +1,6 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func main() {
 
@@ -27,8 +25,14 @@ func main() {
 
 	var name string
 	fmt.Print("Enter your name: ")
-	fmt.Scanf("%s", &name)
-	fmt.Printf("%T %#v\n", name, name)
-	fmt.Printf("%T %#v\n", &name, &name)
-
+	_, err := fmt.Scanf("%s", &name)
+	if err != nil {
+		fmt.Printf("%T %#v\n", err, err)
+	} else {
+		fmt.Printf("%T %#v\n", name, name)
+		fmt.Printf("%T %#v\n", &name, &name)
+		if name == "Nattapon" {
+			fmt.Printf("Hello %s\n", name)
+		}
+	}
 }
