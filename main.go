@@ -48,14 +48,35 @@ func main() {
 	// const pi = math.Pi
 	// fmt.Printf("Var type %T - value %#v\n", pi, pi)
 
-	s := sum(1, 2, 3, 4, 5)
-	fmt.Printf("Var type %T - value %#v\n", s, s)
+	// s := sum(1, 2, 3, 4, 5, 6, 7)
+	// fmt.Printf("Var type %T - value %#v\n", s, s)
+
+	// name := customer.Name
+	// fmt.Printf("Var type %T - value %#v\n", name, name)
+
+	var x int
+	var y *int
+	x = 100
+	y = &x
+	fmt.Printf("Var type %T - value %#v\n", x, x)
+	fmt.Printf("Var type %T - value %#v\n", y, y)
+	fmt.Printf("Var type %T - value %#v\n\n", *y, *y)
+	x = 200
+	fmt.Printf("Var type %T - value %#v\n", x, x)
+	fmt.Printf("Var type %T - value %#v\n", y, y)
+	fmt.Printf("Var type %T - value %#v\n\n", *y, *y)
+
+	*y = 50
+	fmt.Printf("Var type %T - value %#v\n", x, x)
+	fmt.Printf("Var type %T - value %#v\n", y, y)
+	fmt.Printf("Var type %T - value %#v\n\n", *y, *y)
+
 }
 
-func sum(x ...int) int {
-	s := 0
-	for _, v := range x {
-		s += v
-	}
-	return s
-}
+// func sum(x ...int) int {
+// 	s := 0
+// 	for _, v := range x {
+// 		s += v
+// 	}
+// 	return s
+// }
