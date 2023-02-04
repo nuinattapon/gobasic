@@ -21,18 +21,18 @@ func main() {
 	// }
 	// employees := []Employee{}
 	// employees = append(employees, Employee{name: "Nattapon"})
-	// fmt.Printf("%T %#v\n", employees, employees)
+	// fmt.Printf("Var type: %T - value: %#v\n", employees, employees)
 
 	var name string
 	fmt.Print("Enter your name: ")
 	_, err := fmt.Scanf("%s", &name)
 	if err != nil {
-		fmt.Printf("%T %#v\n", err, err)
+		fmt.Printf("%T - %#v\n", err, err)
 	} else {
-		fmt.Printf("%T %#v\n", name, name)
-		fmt.Printf("%T %#v\n", &name, &name)
+		fmt.Printf("%T - %#v\n", name, name)
 		if name == "Nattapon" {
 			fmt.Printf("Hello %s\n", name)
 		}
 	}
+
 }
